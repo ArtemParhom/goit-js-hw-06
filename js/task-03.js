@@ -15,11 +15,15 @@ const images = [
 
 
 const galleryEl = document.querySelector(`.gallery`);
-const makeListVsImageEl = images.map(option => {
-  const listEl = document.createElement(`li`);
-  listEl.insertAdjacentHTML(`beforeend`, `<img src=${option.url} alt=${option.alt}></img>`);
-  return listEl;
-});
-galleryEl.append(...makeListVsImageEl);
 
- 
+// const makeListVsImageEl = images.map(option => {
+//   const listEl = document.createElement(`li`);
+//   listEl.insertAdjacentHTML(`beforeend`, `<img src=${option.url} alt=${option.alt}></img>`);
+//   return listEl;
+// });
+// console.log(makeListVsImageEl);
+// galleryEl.append(...makeListVsImageEl);
+
+const makeArrayUrlsEl= images.map(option => `<li><img src=${option.url} alt=${option.alt}></img></li>`).join("");
+
+galleryEl.insertAdjacentHTML(`beforeend`, makeArrayUrlsEl);

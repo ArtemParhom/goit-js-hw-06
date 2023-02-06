@@ -4,6 +4,13 @@ const refs ={
 
 refs.nameInputEl.addEventListener(`input`,nameOutput);
 
-function nameOutput(event) {
-    refs.nameOutputEl.textContent = event.currentTarget.value;  
+function nameOutput(event) {console.log(event);
+    
+        refs.nameOutputEl.textContent = event.currentTarget.value; 
+        
+        if (refs.nameOutputEl.textContent == "") {
+            refs.nameOutputEl.textContent = "Anonymous"
+        } 
 };
+    
+    

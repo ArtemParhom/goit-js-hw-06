@@ -8,10 +8,11 @@ const restElements = {
   changeColorTextEl: document.querySelector(`.color`)
 };
 
-
 const handleClick = () => {
-  restElements.bodyEl.style.backgroundColor = getRandomHexColor();
-  restElements.changeColorTextEl.textContent = getRandomHexColor();
+  const randomHexColor = getRandomHexColor();
+  console.log(randomHexColor);
+  restElements.bodyEl.style.backgroundColor = randomHexColor;
+  restElements.changeColorTextEl.textContent = randomHexColor;
 };
 
 restElements.btnChangeColorEl.addEventListener(`click`, handleClick);

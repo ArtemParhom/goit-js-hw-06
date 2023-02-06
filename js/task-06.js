@@ -11,12 +11,19 @@ function inputValue(event) {
     return lengthTextInput;
 }
 
+// function inputBlur() {
+//     if (lengthTextInput === Number(validationInputEl.dataset.length)) {
+//         validationInputEl.style.border = `2px solid #4caf50`;
+//         return;
+//     }
+//     validationInputEl.style.border = "2px solid #f44336";
+// }
+
 function inputBlur() {
-    if (lengthTextInput === Number(validationInputEl.dataset.length)) {
-        validationInputEl.style.border = `2px solid #4caf50`;
-        return;
-    }
-    validationInputEl.style.border = "2px solid #f44336";
+    validationInputEl.style.borderColor =
+    lengthTextInput === Number(validationInputEl.dataset.length) ?
+         `#4caf50`:
+         "#f44336";
 }
 
 
